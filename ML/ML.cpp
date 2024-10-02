@@ -2,7 +2,7 @@
 using namespace std;
 
 const int LENGTH = 15;
-const int R = 13;
+const int R = 6;
 const int STANDART_NUMBERS[10][LENGTH] = {
 	{ 1, 1, 1 ,1, 0, 1, 1, 0, 1, 1, 0, 1 ,1, 1, 1 },
 	{ 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1 ,0, 0, 1 },
@@ -200,9 +200,17 @@ int main()
 		}
 	}
 	// cleaning....
+	p = nullptr;
 	delete p;
 
-
+	cout << "-----------------------------\n";
+	for (int i = 0; i < LENGTH; i++) 
+	{
+		cout << w[i] << " ";
+		if (i % 3 == 2 || i == 2) {
+			cout << "\n";
+		}
+	}
 
 	//int* point = new int[5] {1,2};
 	//int** pointer = new int*[2];
